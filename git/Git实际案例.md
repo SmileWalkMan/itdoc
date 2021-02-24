@@ -13,6 +13,11 @@ echo "aaa" >f1.txt
 >git commit -m "commit的说明" f1.txt
 # 将代码提交到远程
 >git push origin testbranch
+# 删除远程分支(需要先切换到其他分支才能删除)
+>git checkout main
+>git branch -D testbranch
+# 同步远程代码到本地branch
+>git pull
 
 创建Pull Request需要在git网页或者git desktop操作
 
