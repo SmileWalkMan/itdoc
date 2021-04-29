@@ -2,6 +2,7 @@
 >apt-get install gvm
 ### 2.配合
 >gvm-setup
+
 >gvm-check-setup
 ### 3.更新admin的密码
 runuser -u _gvm -- gvmb --user=admin --new-password=admin
